@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+* {
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Fira Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primaryblue: #0071e3;
+    --darkblue: #040023;
+    --yaleblue: #005b92;
+    --lightblue: #4ad8fe;
+    --steelblue: #358bc6;
+    --orange: #fca51a;
+    --violet: #a509b2;
+    --slateblue: #c3d7eb;
+    --turquoise: #1fefcb;
+    --pink: #ff0175;
+    --white: #fff;
+    --black: #000;
+}
+html {
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
+body {
+    background: var(--darkblue);
+    overflow-x: hidden !important;
+}
+
+.icon-div-main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    transform: scale(4);
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.iniClass:hover div div div .icon-div {
+    background-color: #fff;
+    color: #198ce6;
+}
+
+.flt-size {
+    margin: 0;
+}
+
+nav {
+}
+nav:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+nav .logo img {
+    float: left;
+    width: 200px;
+    top: 50px;
+    z-index: 2000;
+    padding-left: 30px;
+}
+nav ul {
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
+}
+nav ul li {
+    float: left;
+    display: inline-block;
+    margin: 0 5px;
+}
+nav ul li a {
+    color: white;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+nav ul li a:hover {
+    color: #198ce6;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #198ce6, 0 0 10px #198ce6;
+}
+
+nav ul ul li a:hover {
+    box-shadow: none;
+}
+nav ul ul {
+    position: absolute;
+    top: 80px;
+    border-left: 3px solid #198ce6;
+    background: var(--darkblue);
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.3s;
+}
+nav ul li:hover > ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 250px;
+    float: none;
+    display: list-item;
+    color: #198ce6;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 150px;
+}
+.show,
+.icon,
+.hiddeninput {
+    display: none;
+}
+.fa-plus {
+    font-size: 15px;
+    margin-left: 40px;
+}
+
+
+
+header {
+    font-size: 35px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+p {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.landingLeft {
+    height: 100vh;
+    width: 100%;
+    margin-left: 10%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.landingRight {
+    height: 100vh;
+    width: 100%;
+    margin-left: 10%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+/* .bottom-perks{
+    background-color: red;
+} */
+/* On screens that are 992px or less, set the background color to blue */
+
+
+
+.getStartBtn:hover {
+    background-color: black !important;
+    color: #198ce6 !important;
+    border: 1px solid #198ce6 !important;
+    box-shadow: 0 0 5px #198ce6, 0 0 10px #198ce6 !important;
+}
+
+.iniClass {
+    color: #fff;
+    /* padding: 2%; */
+}
+
+.iniClass:hover {
+    background-color: #198ce6;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.tillClass {
+    width: 100%;
+    background-color: #198ce6;
+}
+
+footer {
+    /* background-color: #000 !important; */
+    color: #198ce6 !important;
+}
+
+.footerCopyright {
+    color: #fff !important;
+}
+
+.footerLinks {
+    color: #198ce6 !important;
+}
+
+.teamLanding {
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(-180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #000;
+    color: black;
+    box-shadow: rgba(233, 188, 188, 0.35) 0px 1px 4px;
+}
+
+.flip-card-back {
+    background-color: #000;
+    color: white;
+    transform: rotateY(180deg);
+    align-items: center;
+    box-shadow: rgba(233, 188, 188, 0.35) 0px 1px 4px;
+}
+
+.profileImg {
+    margin-top: 13%;
+    margin-bottom: 10%;
+}
+
+.hrStyle {
+    width: 90%;
+    margin-left: auto;
+    margin-top: 9%;
+    margin-right: auto;
+    border: 1px solid rgb(70, 66, 66);
+}
+
+.hrStyle2 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    border: 1px solid rgb(70, 66, 66);
+}
+
+.hrStyle3 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30%;
+    border: 1px solid rgb(70, 66, 66);
+}
+
+.socialIconStyle {
+    font-size: 18px;
+    padding: 2%;
+}
+
+.socialIconStyle:hover {
+    color: #198ce6;
+    cursor: pointer;
+}
+
+.init-landing {
+    min-height: 600px;
+}
+
+.desc-font {
+    font-size: 16px;
+}
+.discription {
+    padding: 4%;
+}
+
+.initiativesLanding {
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.iniCardStyle {
+    background-color: #000;
+    border: 1px solid rgb(70, 66, 66);
+    box-shadow: rgba(233, 188, 188, 0.35) 0px 1px 4px;
+}
+
+.iniCardStyle:hover {
+    background-color: #198ce6;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.tabBtnClass:hover {
+    background-color: #000 !important;
+    border-bottom: 1px solid #198ce6 !important;
+}
+
+.sipHr {
+    border: 1px solid #198ce6;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.whyBtnClass:hover {
+    background-color: #000 !important;
+    border-bottom: 1px solid #198ce6 !important;
+}
+
+.capLanding {
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.capRegisterDiv {
+    margin-top: 100px;
+    box-shadow: rgba(91, 91, 119, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-top: 1px solid #374652;
+    border-bottom: 1px solid #374652;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.capFaqDiv {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.capAboutDiv {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.startupIniLanding {
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.pitchUrIdeaDiv {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-top: 1px solid #636b70;
+}
+
+/* responsive design ........................ */
+
+@media screen and (max-width: 1200px) {
+    .profit {
+        flex-wrap: wrap;
+    }
+    .content-h-perks p {
+        max-width: 50vw;
+    }
+    .eureka{
+        margin-top: 3rem;
+    }
+    .card-container-perks{
+        bottom: -85%;
+    }
+    /* .t-l-perks{
+        margin-top: 3rem;
+    } */
+}
+@media screen and (max-width: 1054px) {
+    nav {
+        background: #040023 !important;
+    }
+
+    nav ul {
+        margin-right: 0px;
+        float: left;
+    }
+    nav .logo {
+        padding-left: -10px;
+        width: 100%;
+    }
+    .show + a,
+    ul {
+        display: none;
+    }
+    nav ul li,
+    nav ul ul li {
+        display: block;
+        /* transition: all 0.2s ease-in-out; */
+        width: 100%;
+    }
+    nav ul li a:hover {
+        box-shadow: none;
+    }
+    .show {
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .show:hover {
+        color: #198ce6;
+    }
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        line-height: 70px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+    nav ul ul {
+        top: 70px;
+        border-top: 0px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul ul a {
+        padding-left: 40px;
+    }
+    nav ul ul ul a {
+        padding-left: 80px;
+    }
+    nav ul ul ul li {
+        position: static;
+    }
+    [id^="btn"]:checked + ul {
+        display: block;
+    }
+    nav ul ul li {
+        border-bottom: 0px;
+    }
+    span.cancel:before {
+        content: "\f00d";
+    }
+}
+@media screen and (max-width: 992px) {
+    .landingLeft {
+        height: fit-content;
+    }
+    .landingRight {
+        height: fit-content;
+        text-align: center;
+    }
+}
+
+
+
