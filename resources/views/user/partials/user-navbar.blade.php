@@ -30,14 +30,15 @@
                 </ul>
             </li> --}}
 
-            <li class="nav-item"><a href="{{url('/home')}}" class="nav-link"><i data-feather="box"></i> Discover</a></li>
-            <li class="nav-item"><a href="" class="nav-link"><i data-feather="box"></i> Events</a></li>
-            <li class="nav-item"><a href="" class="nav-link"><i data-feather="box"></i> Blogs</a></li>
-            <li class="nav-item"><a href="" class="nav-link"><i data-feather="archive"></i>Communityes</a></li>
+            <li class="nav-item"><a href="{{route('user.dashboard')}}" class="nav-link">Discover</a></li>
+            <li class="nav-item"><a href="{{route('events.all.dashboard')}}" class="nav-link">Events</a></li>
+            <li class="nav-item"><a href="{{route('communities.all.dashboard')}}" class="nav-link">Communities</a></li>
+            <li class="nav-item"><a href="{{route('blogs.all.dashboard')}}" class="nav-link">Blogs</a></li>
+            
         </ul>
     </div><!-- navbar-menu-wrapper -->
     <div class="navbar-right">
-        <a id="navbarSearch" href="#" class="search-link"><i data-feather="search"></i></a>
+        {{-- <a id="navbarSearch" href="#" class="search-link"><i data-feather="search"></i></a> --}}
 
         <div class="dropdown dropdown-notification">
             <a href="#" class="dropdown-link new-indicator" data-toggle="dropdown">
@@ -82,10 +83,10 @@
                 <div class="dropdown-divider"></div>
                 <a href="{{ route('settings.profile') }}" class="dropdown-item"><i data-feather="settings"></i>Settings</a> --}}
 
-                <a href="" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+                {{-- <a href="" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
                 <a href="" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
                 <div class="dropdown-divider"></div>
-                <a href="" class="dropdown-item"><i data-feather="settings"></i>Settings</a>
+                <a href="" class="dropdown-item"><i data-feather="settings"></i>Settings</a> --}}
                 
                   <a href="{{ url('logout') }}" class="dropdown-item"><i data-feather="log-out"></i>Log Out</a>
                 
@@ -94,8 +95,9 @@
         @else
         <a href="{{ route('user.register') }}" style="padding:6px 16px; font-size:1.1rem; background-color:#0168fa; color:white;margin-left: 0.7rem; cursor: pointer; border-radius: 4px; " >Login</a>
         @endif
-    </div><!-- navbar-right -->
-    <div class="navbar-search">
+    </div>
+    <!-- navbar-right -->
+    {{-- <div class="navbar-search">
         <div class="navbar-search-header">
             <input type="search" class="form-control" placeholder="Type and hit enter to search...">
             <button class="btn"><i data-feather="search"></i></button>
@@ -123,7 +125,7 @@
                 <li><a href="http://themepixels.me/demo/dashforge1.1/components/el-avatar.html">contact app</a></li>
             </ul>
         </div><!-- navbar-search-body -->
-    </div><!-- navbar-search -->
+    </div><!-- navbar-search --> --}}
 </header><!-- navbar -->
 
 <script src="{{ asset('public/dashforge/lib/jquery/jquery.min.js') }}"></script>

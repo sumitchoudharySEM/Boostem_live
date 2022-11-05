@@ -41,9 +41,11 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
 
 // user routes .................................
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified','role:user'])->group(function () {
-    Route::get('/home', function () {
-        return view('user/pages/user-dashboard');
-    })->name('user.dashboard');
+    Route::get('/home', function () { return view('user/pages/user-dashboard');})->name('user.dashboard');
+    Route::get('/events', function () { return view('user/pages/events-dashboard');})->name('events.all.dashboard');
+    Route::get('/blogs', function () { return view('user/pages/blogs-page');})->name('blogs.all.dashboard');
+    Route::get('/communities', function () { return view('user/pages/communities-page');})->name('communities.all.dashboard');
+
     Route::get('/user/profile',[ProfileController::class, 'viewProfile'] )->name('view.profile');
     Route::get('/user/profile/edit',[ProfileController::class, 'editProfile'] )->name('edit.profile');
     Route::get('/user/profile/settings',[ProfileController::class, 'settingsProfile'] )->name('settings.profile');

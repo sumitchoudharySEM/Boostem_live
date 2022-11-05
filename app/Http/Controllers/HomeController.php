@@ -67,6 +67,8 @@ class HomeController extends Controller
         return redirect( '/dashboard' );
     }
 
+    
+
     // public function redirectToGoogle()
     // {
     //     return Socialite::driver('google')->redirect();
