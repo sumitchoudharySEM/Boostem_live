@@ -445,6 +445,15 @@
     padding:6px 12px;border:none;border-radius:6px;">Close</button>
 </div>
 @endif
+@if($errors->any())
+<div  class="flex message-box" id="success-msg" style="position: fixed;z-index:20; left:10vw; top:10vh; height:14rem;width:25rem; background-color:white; flex-direction:column; transition:1s;">
+    <img style="height: 5rem;width:5rem; margin-bottom:1rem;" src="{{ asset('public/icons/error.png') }}" alt="">
+    <h2>Error</h2>
+    <p>{{$errors->first()}}</p>
+    <button onclick="displayNone()" type="button" id="success-close-btn" style="margin-top:0.5rem;background-color:rgb(255, 40, 40);color:white;
+    padding:6px 12px;border:none;border-radius:6px;">Close</button>
+</div>
+@endif
 <div class="banner-wrapper"> <img src="{{ asset('public/img/e-cellBanner.png') }}" alt="your banner"> </div> {{--
 /banner ends heare --}} {{--
 logo and time section startes heare --}}
