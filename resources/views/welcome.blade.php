@@ -204,16 +204,16 @@ Societies) Individuals (Exploring Users) and acquisitors (Companies & Startups)
                 <div class="about">
                     <h2>Boostem</h2>
                     <p>
-                        Boostem is an one stop solution for communities to manage their events projects and workflow , indivisuals , learn through various communities and resources and aquisitors to publicizxe t
+                        Boostem is an one stop solution for communities to manage their events projects and workflow , indivisuals , learn through various communities and resources.
                     </p>
-                    <a href="mailto:info.boostem@gmail.com">
+                    {{-- <a href="mailto:info.boostem@gmail.com">
                         <img src="{{ asset('public/icons/Home.png') }}" alt="" />
                         <p>info.boostem@gmail.com</p>
                     </a>
                     <a href="">
                         <img src="{{ asset('public/icons/Phone.png') }}" alt="" />
                         <p>+91 7987250919</p>
-                    </a>
+                    </a> --}}
                 </div>
                 <div class="quick-links">
                     <h3>Quick links</h3>
@@ -223,12 +223,22 @@ Societies) Individuals (Exploring Users) and acquisitors (Companies & Startups)
                     <a href="{{ url('user/register') }}"> upcoming events </a>
                 </div>
                 <div class="contact">
-                    <h3>contact us</h3>
-                    <form action="">
-                        <input type="text" placeholder="Email :" />
-                        <textarea type="texta" placeholder="Quiery :"></textarea>
-                        <button>Submit</button>
-                    </form>
+                    <h3 style="padding-bottom: 0;">contact us</h3>
+                    {{-- <form action="{{ route('contact.us') }}" method="POST">
+                        <input name="email" type="text" placeholder="Email :" />
+                        <textarea name="query" type="texta" placeholder="Query :"></textarea>
+                        <button type="submit" >Submit</button>
+                    </form> --}}
+                    <div class="about" style="padding-top: 0;">
+                    <a href="mailto:info.boostem@gmail.com">
+                        <img src="{{ asset('public/icons/Home.png') }}" alt="" />
+                        <p>info.boostem@gmail.com</p>
+                    </a>
+                    <a href="">
+                        <img src="{{ asset('public/icons/Phone.png') }}" alt="" />
+                        <p>+91 7987250919</p>
+                    </a>
+                    </div>
                 </div>
             </div>
         </div>
