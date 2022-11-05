@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\EventRegistrationController;
 use App\Http\Controllers\ProfileController;
+
 // use Auth;
 
 /*
